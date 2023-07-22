@@ -45,5 +45,13 @@ def printpyth(text="is cool"):
     return "Python {}".format(text.replace('_', ' '))
 
 
+@app.route('/number/<int:n>', strict_slashes=False)
+def printz(n):
+    """
+        Route /number/<n> that displays 'n is a number' if n is an integer
+    """
+    return "{:d} is a number".format(n)
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
