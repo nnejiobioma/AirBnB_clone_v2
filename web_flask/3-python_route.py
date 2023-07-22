@@ -29,7 +29,7 @@ def hbnb():
 
 
 @app.route('/c/<text>', strict_slashes=False)
-def text_print(text):
+def texprint(text):
     """
     This route /c/<text> displays C followed by value of text variable
     """
@@ -38,7 +38,7 @@ def text_print(text):
 
 @app.route('/python', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
-def python_print(text="is cool"):
+def pytprint(text="is cool"):
     """
     This route /python/<text> displays Python followed by value of text variable
     """
