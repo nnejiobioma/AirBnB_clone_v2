@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
-def index():
+def airbnb():
     """
         This Route / displays "Hello HBNB!"
     """
