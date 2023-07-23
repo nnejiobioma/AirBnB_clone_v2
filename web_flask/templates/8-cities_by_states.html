@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<HTML lang="en">
+    <HEAD>
+        <TITLE>HBNB</TITLE>
+    </HEAD>
+    <BODY>
+        <H1>States</H1>
+        <UL>
+	    {% store in states|sort(attribute="name") %}
+        <LI>{{ store|attr("id") }}: <B>{{ store|attr("name") }}</B>
+            <UL>
+                {% city in state|attr("cities")|sort(attribute="name") %}
+                <LI>{{ city|attr("id") }}: <B>{{ city|attr("name") }}</B></LI>
+                {% endfor %}
+            </UL>
+        </LI>
+	    {% endfor %}
+        </UL>
+    </BODY>
+</HTML>
